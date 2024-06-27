@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiela's Journey - Gallery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b995a1;
+        }
+        nav {
+            background-color: #800000; /* Maroon */
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: linear-gradient(to right, #c9b9b9, #440c0c); /* Gradient background */
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        .logo {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            color: #130e0e;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #755252;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ffcccb; 
+            color: #800000; 
+            transform: scale(1.1);
+        }
+        header {
+            background-color: #b995a1; 
+            color: #3b0718;
+            padding: 4rem 0;
+            text-align: center;
+            background-image: url('img/background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-top: 6rem; 
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        header .decorative-line {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 80%;
+            background-color: #fff;
+        }
+        main {
+            padding: 2rem 0;
+        }
+        .gallery-section {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #e3d5ca; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .gallery-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .gallery-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            margin: 0.5rem; 
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 1rem); 
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item-text {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.3s, bottom 0.3s;
+        }
+        .gallery-item:hover .gallery-item-text {
+            opacity: 1;
+            bottom: 20px;
+        }
+        .gallery-add-box {
+            width: 600px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+            border: 2px dashed #800000;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .gallery-add-box:hover {
+            background-color: #f0ece2;
+        }
+        .gallery-add-box img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+        .gallery-add-box:hover img {
+            transform: scale(1.1);
+        }
+         <meta charset="UTF-8">{
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        }
+
+        .hobby-video {
+            max-width: 250px; 
+            margin: 0 auto; 
+        }
+
+        .hobby-video video {
+            width: 200px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Qiela's Journey</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="person.html">Personal</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>Gallery</h1>
+            <p>A collection of my favorite moments captured in photographs</p>
+            <audio controls>
+                <source src="billie.mp3" type="audio/ogg">
+                <source src="billie.mp3" type="audio/mpeg">
+            </audio>
+            <div class="decorative-line"></div>
+        </div>
+    </header>
+    <main>
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="gallery">
+            <div class="decorative-line"></div>
+            <div class="container-grid"></div>
+                    <div class="container">
+                        <h1>Degree Life</h1>
+                        <p>A collection of my favorite moments captured in photographs</p>
+                        <div class="decorative-line"></div>
+                    </div>
+
+
+                     <div class="gallery-item">
+                            <img src="img/deg6.jpg" alt="Description of Photo 1">
+                            <div class="gallery-item-text"><b>Photo 1</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg28.jpg" alt="Description of Photo 2">
+                            <div class="gallery-item-text"><b>Photo 2</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/degree2.jpg" alt="Description of Photo 3">
+                            <div class="gallery-item-text"><b>Photo 3</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg29.jpg" alt="Description of Photo 4">
+                            <div class="gallery-item-text"><b>Photo 4</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg14.jpg" alt="Description of Photo 5">
+                            <div class="gallery-item-text"><b>Photo 5</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg11.jpg" alt="Description of Photo 6">
+                            <div class="gallery-item-text"><b>Photo 6</b></div>
+                        </div> 
+                        <div class="gallery-item">
+                            <img src="img/deg12.jpg" alt="Description of Photo 7">
+                            <div class="gallery-item-text"><b>Photo 7</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg13.jpg" alt="Description of Photo 8">
+                            <div class="gallery-item-text"><b>Photo 8</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg24.jpg" alt="Description of Photo 9">
+                            <div class="gallery-item-text"><b>Photo 9</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg16.jpg" alt="Description of Photo 10">
+                            <div class="gallery-item-text"><b>Photo 10</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/deg25.jpg" alt="Description of Photo 11">
+                            <div class="gallery-item-text"><b>Photo 11</b></div>
+                        </div>
+
+
+                        <div class="container">
+                            <h1>My School Friends</h1>
+                            <p>A collection of my favorite moments captured in photographs</p>
+                            <div class="decorative-line"></div>
+                        </div>
+                            
+                       
+                        <div class="gallery-item">
+                            <img src="img/fren6.jpg" alt="Description of Photo 13">
+                            <div class="gallery-item-text"><b>Photo 13</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fren1.jpg" alt="Description of Photo 14">
+                            <div class="gallery-item-text"><b>Photo 14</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fren3.jpg" alt="Description of Photo 15">
+                            <div class="gallery-item-text"><b>Photo 15</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fren4.jpg" alt="Description of Photo 16">
+                            <div class="gallery-item-text"><b>Photo 16</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fren5.jpg" alt="Description of Photo 17">
+                            <div class="gallery-item-text"><b>Photo 17</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fren19.jpg" alt="Description of Photo 18">
+                            <div class="gallery-item-text"><b>Photo 18</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fren20.jpg" alt="Description of Photo 19">
+                            <div class="gallery-item-text"><b>Photo 19</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fren11.jpg" alt="Description of Photo 20">
+                            <div class="gallery-item-text"><b>Photo 20</b></div>
+                        </div>
+
+                        <div class="container">
+                            <h1>Myself</h1>
+                            <p>A collection of my favorite moments captured in photographs</p>
+                            <div class="decorative-line"></div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="img/myself1.JPG" alt="Description of Photo 23">
+                            <div class="gallery-item-text"><b>Photo 23</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/myself7.jpg" alt="Description of Photo 24">
+                            <div class="gallery-item-text"><b>Photo 24</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/myself2.jpg" alt="Description of Photo 25">
+                            <div class="gallery-item-text"><b>Photo 25 </b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/myself3.jpg" alt="Description of Photo 26">
+                            <div class="gallery-item-text"><b>Photo 26 </b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/myself5.jpg" alt="Description of Photo 27">
+                            <div class="gallery-item-text"><b>Photo 27 </b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/myself6.jpg" alt="Description of Photo 28">
+                            <div class="gallery-item-text"><b>Photo 28 </b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/myself8.jpg" alt="Description of Photo 29">
+                            <div class="gallery-item-text"><b>Photo 29 </b></div>
+                        </div>
+
+
+                        <div class="container">
+                            <h1>My Family Memories</h1>
+                            <p>A collection of my favorite moments captured in photographs</p>
+                            <div class="decorative-line"></div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="img/fam4.jpg" alt="Description of Photo 31">
+                            <div class="gallery-item-text"><b>Photo 31 </b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam11.jpg" alt="Description of Photo 32">
+                            <div class="gallery-item-text"><b>Photo 32</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam6.jpg" alt="Description of Photo 33">
+                            <div class="gallery-item-text"><b>Photo 33</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam7.jpg" alt="Description of Photo 34">
+                            <div class="gallery-item-text"><b>Photo 34</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam27.jpg" alt="Description of Photo 35">
+                            <div class="gallery-item-text"><b>Photo 35</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam14.jpg" alt="Description of Photo 36">
+                            <div class="gallery-item-text"><b>Photo 36 </b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam15.jpg" alt="Description of Photo 37">
+                            <div class="gallery-item-text"><b> Photo 37</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam23.jpeg" alt="Description of Photo 40">
+                            <div class="gallery-item-text"><b>Photo 40</b></div>
+                        </div>
+                    
+                        <div class="container">
+                            <h1>My Sweet Memories</h1>
+                            <p>A collection of my favorite moments captured in photographs</p>
+                            <div class="decorative-line"></div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="img/fam17.jpg" alt="Description of Photo 42">
+                            <div class="gallery-item-text"><b>Photo 42</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/sm4.jpg" alt="Description of Photo 43">
+                            <div class="gallery-item-text"><b>Photo 43</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam19.jpg" alt="Description of Photo 44">
+                            <div class="gallery-item-text"><b>Photo 44</b></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/fam18.jpg" alt="Description of Photo 45">
+                            <div class="gallery-item-text"><b>Photo 45</b></div>
+                        </div>
+
+
+                        <div class="hobby-video">
+                            <video controls>
+                                <source src="video 1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+
+                        <div class="gallery-item">
+                            <img src="img/sm3.jpg" alt="Description of Photo 47">
+                            <div class="gallery-item-text"><b>Photo 47</b></div>
+                        </div>
+                        
+                            <div class="gallery-item">
+                                <img src="img/sm1.jpg" alt="Description of Photo 1">
+                                <div class="gallery-item-text"><b>Photo 1</b></div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/aisy8.jpg" alt="Description of Photo 2">
+                                <div class="gallery-item-text"><b>Photo 2</b></div>
+                            </div>
+                        </div>      
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+
+
+<footer>
+    <br>
+<center><p>QielaWorld &copy; 2024</p></center>
+</footer>
+</body>
+
+<p>
+    <h2 style="text-align:right;"><a href="#top">TOP</a></h2>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

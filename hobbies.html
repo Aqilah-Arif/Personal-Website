@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiela's Journey - Hobbies</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f06, #b995a1);
+            color: #333;
+            transition: background 0.5s;
+        }
+        nav {
+            background-color: #800000;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: linear-gradient(to right, #a52a2a, #800000);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: background-image 0.5s;
+        }
+        .logo {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ffcccb;
+            color: #800000;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 6rem 0 2rem;
+            transition: padding 0.5s
+        }
+    .page-content {
+        text-align: center;
+        padding: 0 1rem;
+        transition: padding 0.5s;
+    }
+    .page-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+        color: #800000;
+    }
+    .page-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+    }
+    .hobby-section {
+        background: linear-gradient(135deg, #f0ece2, #f5f5f5);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        transition: background 0.5s, padding 0.5s;
+    }
+    .hobby-section h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+        color: #800000;
+    }
+    .hobby-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+    }
+    .hobby-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        transition: gap 0.5s;
+    }
+    .hobby-images img {
+        width: 100%;
+        max-width: 300px;
+        border: 4px solid #800000;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .hobby-images img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .image-description {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 0.5rem;
+        color: #555;
+    }
+    .hero-section {
+        background-image: url('img/hobbies-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fdeded;
+        text-align: center;
+        padding: 5rem 0;
+        transition: background-image 0.5s, padding 0.5s;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        transition: max-width 0.5s;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+    }
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+    }
+    .quotes-section {
+        background: linear-gradient(135deg, #f06, #b995a1);
+        padding: 4rem 0;
+        text-align: center;
+        color: #fff;
+        transition: background 0.5s, padding 0.5s;
+    }
+    .quotes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        transition: gap 0.5s;
+    }
+    .quote-item {
+        flex: 1 1 30%;
+        max-width: 300px;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333;
+        transition: background-color 0.5s, padding 0.5s, box-shadow 0.5s;
+    }
+    .quote-item h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+        color: #800000;
+    }
+    .quote-item p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        transition: font-size 0.5s, margin-bottom 0.5s;
+    }
+    .quote-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        margin-bottom: 1rem;
+        transition: border-radius 0.5s, box-shadow 0.5s;
+    }
+    .quote-item img:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 768px) {
+        .quotes-container {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .quote-item {
+            flex: 0 0 80%;
+        }
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        nav ul li {
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+        .hobby-images img {
+            width: 100%;
+        }
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+        }
+        .page-content h2 {
+            font-size: 2rem;
+        }
+        .page-content p {
+            font-size: 1rem;
+        }
+        .hobby-section h3 {
+            font-size: 1.5rem;
+        }
+        .hobby-section p {
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Qiela's Journey</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="person.html">Personal</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="page-content">
+            <h2>Hobbies</h2>
+            <p>Welcome to my hobbies page! Here, I share my passions and interests that bring joy and fulfillment to my life.</p>
+        </div>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Explore My Hobbies</h1>
+                <p>Discover the activities that I love and enjoy in my free time.</p>
+            </div>
+        </div>
+        <div class="hobby-section">
+            <h3>Reading</h3>
+            <p>Reading is my escape into different worlds and adventures. From fiction to non-fiction, I love immersing myself in a good book and getting lost in its pages.</p>
+            <p>Books have been a source of knowledge, inspiration, and entertainment for me. They offer endless possibilities and have fueled my imagination and curiosity.</p>
+            <div class="hobby-images">
+                <img src="img/B1.jpg" alt="Reading Image 1">
+                <img src="img/B2.jpg" alt="Reading Image 2">
+                <img src="img/B3.jpg" alt="Reading Image 3">
+            </div>
+        </div>
+        <div class="hobby-section">
+            <h3>Movie & Drama Favorite</h3>
+            <p>These movie are the list of my favorite movie that I will watch during my free time</p>
+            <div class="hobby-images">
+        <img src="img/M1.jpg" alt="Reading Image 1">
+              
+                <img src="img/M2.jpg" alt="Reading Image 2">
+               
+                <img src="img/M3.jpg" alt="Reading Image 3">
+               
+                <img src="img/M4.jpg" alt="Reading Image 4">
+             
+                <img src="img/M5.jpg" alt="Reading Image 5">
+            
+                <img src="img/M6.jpg" alt="Reading Image 6">
+              
+                <img src="img/M7.jpg" alt="Reading Image 7">
+              
+                <img src="img/M8.jpg" alt="Reading Image 8">
+               
+                <img src="img/M9.jpg" alt="Reading Image 9">
+
+                <img src="img/M10.jpg" alt="Reading Image 10">
+              
+                <img src="img/M11.jpg" alt="Reading Image 11">
+               
+                <img src="img/M12.jpg" alt="Reading Image 12">
+            </div>
+        </div>
+        <div class="quotes-section">
+            <h2>Inspirational Quotes</h2>
+            <div class="quotes-container">
+                <div class="quote-item">
+                    <h4>Quote 1</h4>
+                    <p>"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt</p>
+                </div>
+                <div class="quote-item">
+                    <h4>Quote 2</h4>
+                    <p>"The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well." - Ralph Waldo Emerson</p>
+                </div>
+                <div class="quote-item">
+                    <h4>Quote 3</h4>
+                    <p>"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston S. Churchill</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<footer>
+    <br>
+<center><p>QielaWorld &copy; 2024</p></center>
+</footer>
+</body>
+
+<p>
+    <h2 style="text-align:right;"><a href="#top">TOP</a></h2>
+    </html>
+

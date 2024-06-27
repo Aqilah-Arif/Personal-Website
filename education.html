@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiela's Journey - Education</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b995a1;
+            transition: background-color 0.5s;
+        }
+        nav {
+            background-color: #800000; 
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: linear-gradient(to right, #a52a2a, #800000); 
+            padding: 1rem;
+            border-radius: 10px;
+            transition: background-image 0.5s;
+        }
+        .logo {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ffcccb; 
+            color: #800000; 
+            transform: scale(1.1);
+        }
+        main {
+            padding: 6rem 0 2rem; 
+            transition: padding 0.5s;
+        }
+        .page-content {
+            text-align: center;
+            padding: 0 1rem;
+        }
+        .page-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            transition: font-size 0.3s;
+        }
+        .page-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            transition: font-size 0.3s;
+        }
+        .learn-more {
+            background-color: #800000; /* Maroon */
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+        .learn-more:hover {
+            background-color: #a52a2a; /* Darker Maroon */
+            transform: scale(1.05);
+        }
+        .school-experience {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .school-experience:hover {
+            background-color: #e0e0e0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .school-experience h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            transition: font-size 0.3s;
+        }
+        .school-experience p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            transition: font-size 0.3s;
+        }
+        .school-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .school-images img {
+            max-width: 400px;
+            max-height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .school-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .hero-section {
+            background-image: url('img/education-hero.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #fdeded;
+            text-align: center;
+            padding: 5rem 0;
+            transition: background-position 0.5s;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: font-size 0.3s;
+        }
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            transition: font-size 0.3s;
+        }
+        .testimonial-section {
+            background-color: #b995a1;
+            padding: 4rem 0;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4rem;
+        }
+        .timeline-item {
+            flex: 0 0 30%;
+            background-color: #f0ece2;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+        .timeline-item:nth-child(even) {
+            background-color: #f0ece2;
+        }
+        .timeline-item:hover {
+            background-color: #e0ddd2;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+        }
+        .timeline-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            transition: font-size 0.3s;
+        }
+        .timeline-item p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            transition: font-size 0.3s;
+        }
+        .timeline-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .timeline-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        @media (max-width: 768px) {
+            .timeline {
+                flex-wrap: wrap;
+            }
+            .timeline-item {
+                flex-basis: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Qiela's Journey</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="person.html">Personal</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="page-content">
+            <h2>Education</h2>
+            <audio controls>
+                <source src="espresso.mp3" type="audio/ogg">
+                <source src="espresso.mp3" type="audio/mpeg">
+            </audio>
+            <div class="school-experience">
+                <h3>Sekolah Kebangsaan Hutan Kampung</h3>
+                <p>I had an amazing time at my old school. From the teachers who inspired me to the friends who supported me, every moment was unforgettable. I learned not just academic subjects but also valuable life lessons that have shaped who I am today.</p>
+               
+            </div>
+            <div class="school-images">
+                <img src="img/sk1.jpg" alt="Old School Image 1">
+                <img src="img/SKHK.jpg" alt="Old School Image 2">
+                <img src="img/sk5.jpg" alt="Old School Image 3">
+
+            </div>
+        </div>
+        <div class="page-content">
+            <h2>Education</h2>
+            <div class="school-experience">
+                <h3>Sekolah Menengah Kebangsaan Sultanah Bahiyah</h3>
+                <p>My old school provided a nurturing environment where I could explore my interests and grow as an individual. I'm grateful for the memories and friendships I made during my time there.</p>
+            </div>
+            <div class="school-images">
+                <img src="img/smk2.jpg" alt="Old School Image 1">
+                <img src="img/smk3.jpg" alt="Old School Image 2">
+                <img src="img/smk6.jpg" alt="Old School Image 3">
+
+            </div>
+        </div>
+        <div class="page-content">
+            <h2>Education</h2>
+            <div class="school-experience">
+                <h3>Universiti Teknologi MARA (UiTM)</h3>
+                <p>Diploma in Public Administration</p>
+            </div>
+            <div class="school-images">
+                <img src="img/dip 4.jpg" alt="Old School Image 1">
+                <img src="img/dip 2.jpg" alt="Old School Image 2">
+                <img src="img/dip 3.jpg" alt="Old School Image 3">
+  
+            </div>
+        </div>
+        <div class="page-content">
+            <h2>Education</h2>
+            <div class="school-experience">
+                <h3>Universiti Teknologi MARA (UiTM)</h3>
+                <p>Degree in Library Management</p>
+            </div>
+            <div class="school-images">
+                <img src="img/deg16.jpg" alt="Old School Image 1">
+                <img src="img/degree2.jpg" alt="Old School Image 2">
+                <img src="img/degree3.jpg" alt="Old School Image 2">
+
+            </div>
+        </div>
+        <section id="testimonial-section" class="testimonial-section">
+            <h1>Quotes Of The Days</h1>
+            <div class="container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4> – Malcolm X – </h4>
+                        <p>“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4> – Albert Einstein – </h4>
+                        <p>“Anyone who has never made a mistake has never tried anything new.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+<footer>
+    <br>
+<center><p>QielaWorld &copy; 2024</p></center>
+</footer>
+</body>
+
+<p>
+    <h2 style="text-align:right;"><a href="#top">TOP</a></h2>
+    </html>

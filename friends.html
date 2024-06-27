@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiela's Journey - Friends</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img/background.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            color: #fff; 
+        }
+        nav {
+            background: rgba(128, 0, 0, 0.8); 
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ffcccb; 
+            color: #800000; 
+            transform: scale(1.1);
+        }
+        main {
+            padding: 7rem 0 2rem; 
+            backdrop-filter: blur(10px); 
+            background: rgba(0, 0, 0, 0.5); 
+        }
+        .page-content {
+            text-align: center;
+            padding: 0 1rem;
+        }
+        .page-content h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #631d1c; /* Light Maroon */
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .friends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            animation: slideIn 2s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .friend {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden; 
+        }
+        .friend:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .friend img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .friend img:hover {
+            transform: rotate(5deg) scale(1.1);
+        }
+        .name {
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            color: #800000; 
+        }
+        .relationship {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Qiela's Journey</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="person.html">Personal</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="page-content">
+            <h2>My Friends</h2>
+            <div class="decorative-line"></div>
+            <div class="friends-grid">
+                <div class="friend">
+                    <img src="img/fren11.jpg" alt="Friend 1">
+                    <p class="name">Friend 1's Name</p>
+                    <p class="relationship">Best Friend</p>
+                </div>
+                <div class="friend">
+                    <img src="img/degree2.jpg" alt="Friend 2">
+                    <p class="name">Friend 2's Name</p>
+                    <p class="relationship">College Friend</p>
+                </div>
+                <div class="friend">
+                    <img src="img/deg13.jpg" alt="Friend 3">
+                    <img src="img/deg16.jpg" alt="Friend 3">
+                    <img src="img/deg27.jpg" alt="Friend 3">
+                    <p class="name">Friend 3's Name</p>
+                    <p class="relationship">Work Friend</p>
+                </div>
+                <div class="friend">
+                    <img src="img/smk4.jpg" alt="Friend 4">
+                    <img src="img/smk5.jpg" alt="Friend 7">
+                    <img src="img/smk6.jpg" alt="Friend 7">
+                    <p class="name">Friend 4's Name</p>
+                    <p class="relationship">High School Friend</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+<footer>
+    <br>
+<center><p>QielaWorld &copy; 2024</p></center>
+</footer>
+</body>
+
+<p>
+    <h2 style="text-align:right;"><a href="#top">TOP</a></h2>
+    </html>
+

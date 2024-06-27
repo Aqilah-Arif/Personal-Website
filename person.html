@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiela's Journey - Personal Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b995a1;
+        }
+        nav {
+            background-color: #800000; 
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: linear-gradient(to right, #ffcda2, #800000); 
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        .logo {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            color: #fff;
+        }
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ffcccb; 
+            color: #800000; 
+            transform: scale(1.1);
+        }
+        header {
+            background-color: #a52a2a; 
+            color: #3b0718;
+            padding: 4rem 0;
+            text-align: center;
+            background-image: url('img/background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-top: 6rem; 
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        header .decorative-line {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 80%;
+            background-color: #fff;
+        }
+        main {
+            padding: 2rem 0;
+        }
+        .home-section {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #f8f0e3; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .home-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .home-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .learn-more {
+            background-color: #800000; 
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        .learn-more:hover {
+            background-color: #921709; 
+        }
+        .feature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-direction: column;
+        }
+        .feature img {
+            max-width: 250px; 
+            border-radius: 10px; 
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .feature-content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Qiela's Journey</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="person.html">Personal</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>Welcome to Qiela's Journey</h1>
+            <p>Exploring the world one step at a time</p>
+            <div class="decorative-line"></div>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="home-section">
+            <div class="container">
+                <h2>Home</h2>
+                <div class="feature">
+                    <img src="img/myself3.jpg" alt="Qiela's Profile Picture"> 
+                    <div class="feature-content">
+                        <p>Hi, I'm Aqilah Arif! Join me as I embark on my journey to explore the world and capture its beauty through my lens.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-content">
+                        <h2>About me</h2>
+                        <p><b>Personal Information</b></p>
+                        <p>Full Name : Nur Aqilah binti Muhamad Arif</p>
+                        <p>Date of Birth: 28 January</p>
+                        <p>Gender: Women</p>
+                        <p>Marital Status: Single</p>
+                        <p>Nationality: Malaysian</p>
+                        <p>Contact Information: 01120852623</p>
+                        <P>Place of Birth: Alor Setar</P>
+                        <p><b>Educational Background</b></p>
+                        <p>Academic Qualifications: Degree in UiTM Cawangan Kedah</p>
+                        <P>Specializations: Diploma in Public Administration & Degree in Library Management</P>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-content">
+                        <h3>MY HOobbies</h3>
+                        <p>View some of my hobbies here."I would love for you to check out my hobby website, where I share my passion.</p>
+                        <p>Visit here to explore more!"</p>
+                        <a href="hobbies.html" class="learn-more">View My HOobbies</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+<footer>
+    <br>
+<center><p>QielaWorld &copy; 2024</p></center>
+</footer>
+</body>
+
+<p>
+    <h2 style="text-align:right;"><a href="#top">TOP</a></h2>
+    </html>
+
